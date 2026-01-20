@@ -1,16 +1,24 @@
-# Obsidian Sample Plugin
+# Gamified Life
 
-This is a sample plugin for Obsidian (https://obsidian.md).
+## Support / 赞助
+
+If you find this plugin useful and would like to support its development, you can buy me a coffee via WeChat or Alipay.
+如果您觉得这个插件对您有帮助，欢迎通过微信或支付宝请我喝杯咖啡。
+
+| WeChat Pay / 微信支付 | Alipay / 支付宝 |
+| :---: | :---: |
+| <img src="funding/wechat.png" width="200" /> | <img src="funding/alipay.jpg" width="200" /> |
+
+Turn your life into an epic adventure and track every level-up with Obsidian.
 
 This project uses TypeScript to provide type checking and documentation.
 The repo depends on the latest plugin API (obsidian.d.ts) in TypeScript Definition format, which contains TSDoc comments describing what it does.
 
-This sample plugin demonstrates some of the basic functionality the plugin API can do.
-- Adds a ribbon icon, which shows a Notice when clicked.
-- Adds a command "Open modal (simple)" which opens a Modal.
-- Adds a plugin setting tab to the settings page.
-- Registers a global click event and output 'click' to the console.
-- Registers a global interval which logs 'setInterval' to the console.
+## Features
+
+- **Gamification**: Turn your tasks and goals into quests and achievements.
+- **Level Up**: Track your progress and level up your character.
+- **Rewards**: Earn rewards for completing tasks.
 
 ## First time developing plugins?
 
