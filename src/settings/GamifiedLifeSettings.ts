@@ -1,6 +1,6 @@
 import { App, Plugin, PluginSettingTab, Setting, TAbstractFile, TFolder } from "obsidian";
 
-import { GamifiedLifeInterface } from "../GamifiedLifeInterface";
+import { GamifiedLifeInterface } from "@/GamifiedLifeInterface";
 
 export interface GamifiedLifeSettingsInterface {
 	version: string;

@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"baseUrl": "src",
+		"baseUrl": ".",
 		"inlineSourceMap": true,
 		"inlineSources": true,
 		"module": "ESNext",
@@ -22,9 +22,11 @@
 			"ES5",
 			"ES6",
 			"ES7"
-		]
+		],
+		"jsx": "react-jsx",
+		"paths": {
+			"@/*": ["./src/*"]
+		}
 	},
-	"include": [
-		"src/**/*.ts"
-	]
+	"include": ["**/*.ts", "**/*.tsx"]
 }

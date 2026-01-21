@@ -26,7 +26,7 @@ import {
 import {
 	DEFAULT_SETTINGS, 
 	GamifiedLifeSettingsInterface,
-} from "./settings/GamifiedLifeSettings";
+} from "@/settings/GamifiedLifeSettings";
 
 export default class GamifiedLife extends Plugin {
 	settings: GamifiedLifeSettingsInterface;
