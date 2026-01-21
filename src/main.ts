@@ -29,6 +29,8 @@ import {
 } from "@/settings/GamifiedLifeSettings";
 import { OptionsView } from "@/views/OptionsView";
 import { ReadmeView } from "@/views/ReadmeView";
+import { I18nService } from '@/services/I18nService';
+import { NewsView } from '@/views/NewsView';
 
 export default class GamifiedLife extends Plugin {
 	settings: GamifiedLifeSettingsInterface;
@@ -42,17 +44,18 @@ export default class GamifiedLife extends Plugin {
 
 		this.registerView("gamified-life-options", (leaf) => new OptionsView(this.app, this, leaf));
 		this.registerView("gamified-life-readme", (leaf) => new ReadmeView(this.app, this, leaf));
+		this.registerView("gamified-life-news", (leaf) => new NewsView(this.app, this, leaf));
 
 		// This creates an icon in the left ribbon.
 		this.addRibbonIcon('gamepad-2', 'Gamified Life', (evt: MouseEvent) => {
 			// Called when the user clicks the icon.
 			new Notice('Gamified Life is active! aaa');
 
-			this.app.workspace.detachLeavesOfType("gamified-life-readme");
-			this.app.workspace.getLeaf(true).setViewState({
-				type: "gamified-life-readme",
-				active: true,
-			});
+			// this.app.workspace.detachLeavesOfType("gamified-life-readme");
+			// this.app.workspace.getLeaf(true).setViewState({
+			// 	type: "gamified-life-readme",
+			// 	active: true,
+			// });
 		});
 
 		this.app.workspace.onLayoutReady(this.onLayoutReady.bind(this));
@@ -121,6 +124,6 @@ export default class GamifiedLife extends Plugin {
 	}
 
 	async onLayoutReady() {
-		new Notice('Gamified Life: Layout Ready');
+		I18nService.loadSettings();
 	}
 }

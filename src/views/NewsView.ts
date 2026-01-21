@@ -1,10 +1,11 @@
 import { GamifiedLifeInterface } from "@/GamifiedLifeInterface";
-import { App, ItemView, WorkspaceLeaf } from "obsidian";
-import { Root, createRoot } from "react-dom/client";
+import { App, ItemView, View, WorkspaceLeaf } from "obsidian";
+import { createRoot, Root } from "react-dom/client";
 
-export class OptionsView extends ItemView {
-    protected viewType = "gamified-life-options";
-    protected displayText = "Gamified Life Options";
+// 更新日志
+export class NewsView extends ItemView implements View {
+    protected viewType = "gamified-life-news";
+    protected displayText = "Gamified Life News";
     public icon = "gamepad-2";
     private _root: Root | undefined = undefined;
 
@@ -16,7 +17,6 @@ export class OptionsView extends ItemView {
     getViewType(): string {
         return this.viewType;
     }
-
     getDisplayText(): string {
         return this.displayText;
     }
@@ -32,6 +32,6 @@ export class OptionsView extends ItemView {
 
     async render(): Promise<void> {
         this.contentEl.empty();
-        this.contentEl.createEl("h1", { text: "Options" });
+        this.contentEl.createEl("h1", { text: "News" });
     }
 }
