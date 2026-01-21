@@ -7,7 +7,7 @@ If you find this plugin useful and would like to support its development, you ca
 
 | WeChat Pay / 微信支付 | Alipay / 支付宝 |
 | :---: | :---: |
-| <img src="funding/wechat.png" width="200" /> | <img src="funding/alipay.jpg" width="200" /> |
+| <img src="https://raw.githubusercontent.com/Eternity714/obsidian-gamified-life/master/funding/wechat.png" width="200" /> | <img src="https://raw.githubusercontent.com/Eternity714/obsidian-gamified-life/master/funding/alipay.jpg" width="200" /> |
 
 Turn your life into an epic adventure and track every level-up with Obsidian.
 
