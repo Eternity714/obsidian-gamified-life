@@ -1,4 +1,5 @@
 /*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+@layer properties;
 .visible {
   visibility: visible;
 }
@@ -17,6 +18,56 @@
 .inline {
   display: inline;
 }
+.cursor-pointer {
+  cursor: pointer;
+}
 .resize {
   resize: both;
+}
+.list-inside {
+  list-style-position: inside;
+}
+.list-disc {
+  list-style-type: disc;
+}
+.list-none {
+  list-style-type: none;
+}
+.border-b {
+  border-bottom-style: var(--tw-border-style);
+  border-bottom-width: 1px;
+}
+.border-b-\[--background-modifier-border\] {
+  border-bottom-color: --background-modifier-border;
+}
+.\!bg-transparent {
+  background-color: transparent !important;
+}
+.text-\[--text-accent\] {
+  color: --text-accent;
+}
+.text-\[--text-muted\] {
+  color: --text-muted;
+}
+.\!no-underline {
+  text-decoration-line: none !important;
+}
+.hover\:text-\[--text-accent-hover\] {
+  &:hover {
+    @media (hover: hover) {
+      color: --text-accent-hover;
+    }
+  }
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-border-style: solid;
+    }
+  }
 }

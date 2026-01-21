@@ -27,6 +27,8 @@ import {
 	DEFAULT_SETTINGS, 
 	GamifiedLifeSettingsInterface,
 } from "@/settings/GamifiedLifeSettings";
+import { OptionsView } from "@/views/OptionsView";
+import { ReadmeView } from "@/views/ReadmeView";
 
 export default class GamifiedLife extends Plugin {
 	settings: GamifiedLifeSettingsInterface;
@@ -38,10 +40,19 @@ export default class GamifiedLife extends Plugin {
 	async onload() {
 		await this.loadSettings();
 
+		this.registerView("gamified-life-options", (leaf) => new OptionsView(this.app, this, leaf));
+		this.registerView("gamified-life-readme", (leaf) => new ReadmeView(this.app, this, leaf));
+
 		// This creates an icon in the left ribbon.
 		this.addRibbonIcon('gamepad-2', 'Gamified Life', (evt: MouseEvent) => {
 			// Called when the user clicks the icon.
-			new Notice('Gamified Life is active! 111');
+			new Notice('Gamified Life is active! aaa');
+
+			this.app.workspace.detachLeavesOfType("gamified-life-readme");
+			this.app.workspace.getLeaf(true).setViewState({
+				type: "gamified-life-readme",
+				active: true,
+			});
 		});
 
 		this.app.workspace.onLayoutReady(this.onLayoutReady.bind(this));
@@ -102,7 +113,7 @@ export default class GamifiedLife extends Plugin {
 	}
 
 	onunload() {
-		// this.app.workspace.detachLeavesOfType("gamified-life-readme");
+		this.app.workspace.detachLeavesOfType("gamified-life-readme");
 	}
 
 	async loadSettings() {
