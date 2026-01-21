@@ -2,11 +2,10 @@
 	"name": "obsidian-gamified-life",
 	"version": "1.0.0",
 	"description": "Turn your life into an epic adventure and track every level-up with Obsidian.",
-	"main": "main.js",
-	"type": "module",
+	"main": "src/main.ts",
 	"scripts": {
 		"dev": "node esbuild.config.mjs",
-		"build": "tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
+		"build": "npx tailwindcss -i ./styles.tailwind.css -o ./styles.css && tsc -noEmit -skipLibCheck && node esbuild.config.mjs production",
 		"version": "node version-bump.mjs && git add manifest.json versions.json",
 		"lint": "eslint ."
 	},
@@ -14,6 +13,7 @@
 	"license": "GPL-3.0-or-later",
 	"devDependencies": {
 		"@eslint/js": "9.30.1",
+		"@tailwindcss/cli": "^4.1.18",
 		"@types/node": "^16.11.6",
 		"@types/react": "^19.2.9",
 		"@types/react-dom": "^19.2.3",
@@ -21,6 +21,7 @@
 		"eslint-plugin-obsidianmd": "0.1.9",
 		"globals": "14.0.0",
 		"jiti": "2.6.1",
+		"tailwindcss": "^4.1.18",
 		"tslib": "2.4.0",
 		"typescript": "^5.8.3",
 		"typescript-eslint": "8.35.1"

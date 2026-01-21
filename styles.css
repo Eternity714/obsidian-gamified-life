@@ -1,8 +1,22 @@
-/*
-
-This CSS file will be included with your plugin, and
-available in the app when your plugin is enabled.
-
-If your plugin does not need CSS, delete this file.
-
-*/
+/*! tailwindcss v4.1.18 | MIT License | https://tailwindcss.com */
+.visible {
+  visibility: visible;
+}
+.absolute {
+  position: absolute;
+}
+.fixed {
+  position: fixed;
+}
+.contents {
+  display: contents;
+}
+.hidden {
+  display: none;
+}
+.inline {
+  display: inline;
+}
+.resize {
+  resize: both;
+}
