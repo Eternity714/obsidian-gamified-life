@@ -1,5 +1,6 @@
 import ReactMarkdown, { Components } from "react-markdown";
 import rehypeRaw from "rehype-raw";
+import remarkGfm from "remark-gfm";
 import { GamifiedLifeInterface } from "@/GamifiedLifeInterface";
 import { useApi } from "@/hooks/useApi";
 import { useApp } from "@/hooks/useApp";
@@ -91,7 +92,12 @@ export default function MarkdownComponent({
 
 	return (
 		<div className={`markdown-content ${className ?? ""}`}>
-			<ReactMarkdown rehypePlugins={[rehypeRaw]} children={transformedValue} components={components} />
+			<ReactMarkdown
+				remarkPlugins={[remarkGfm]}
+				rehypePlugins={[rehypeRaw]}
+				children={transformedValue}
+				components={components}
+			/>
 		</div>
 	);
 }
